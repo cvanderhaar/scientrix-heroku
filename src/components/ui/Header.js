@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../img/logo.png'
+import logo from '../../img/shoprite-logo-header.svg'
 
 const Header = () => {
   return (

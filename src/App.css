@@ -1,15 +1,45 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 3px;
 }
+
+.logo {
+  float: right;
+}
+
+.footerWrap {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+.footer {
+  width: 1500px;
+  margin: auto;
+}
+.footerContent {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+}
+.footer img {float: left; width: 100%; text-align: center; }
+
+/* .progress {
+  color: #fff;
+} */
 
 html,
 body {
-  background: #000 url('img/bg.jpg') no-repeat center center/cover;
+  background: url('./img/dash_bg.png') no-repeat center center/cover;
   height: 100vh;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'AvenirNextLTPro';
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  src: url('./font/AvenirLTProMedium.otf');
 }
 
 a {
@@ -17,9 +47,66 @@ a {
 }
 
 .container {
-  max-width: 1100px;
   margin: auto;
   padding: 0 20px;
+  align-items: center;
+}
+
+.cards > div:nth-of-type(1) {
+  grid-column: 1 / 5;
+  background-attachment: fixed;
+  background: #384C58;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+/* .progress > div:nth-of-type(1) {
+  color: #fff;
+} */
+
+.cards > div:nth-of-type(2) {
+  display: none;
+}
+
+.cards > div:nth-of-type(3) {
+  justify-content: center;
+  width: 390px;
+  height: 80%;
+  background-attachment: fixed;
+  background-color: #549AA7;
+}
+
+.cards > div:nth-of-type(4) {
+  justify-content: center;
+  width: 390px;
+  height: 80%;
+  background-attachment: fixed;
+  background-color: #7B9E41;
+}
+
+.cards > div:nth-of-type(5) {
+  justify-content: center;
+  width: 390px;
+  height: 80%;
+  background-attachment: fixed;
+  background-color: #FACE3E;
+  color: #242B30;
+}
+
+.cards > div:nth-of-type(7) {
+  justify-content: center;
+  width: 390px;
+  height: 80%;
+  background-attachment: fixed;
+  background-color: #E4652D;
+}
+
+.cards > div:nth-of-type(6) {
+  display: none;
+}
+
+.cards > div:nth-of-type(8) {
+  display: none;
 }
 
 .btn {
@@ -48,7 +135,9 @@ header img {
 }
 
 .search {
-  height: 100px;
+  height: 50px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 input[type='text'] {
@@ -64,22 +153,100 @@ input[type='text'] {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  align-items: center;
 }
 
 .card {
+  display: block;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: 'AvenirNextLTPro';
+  text-align: center;
+
+  transition: 0.5s ease;
   cursor: pointer;
-  background-color: transparent;
-  height: 300px;
-  perspective: 1000px;
+  margin:30px;
 }
+
+.card-image {
+  grid-area: image;
+  background: url("img/bg.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  justify-content: center;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  text-align: center;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+  text-align: center;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+  text-align: center;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+.card-stats .stat {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+.card-stats .value{
+  font-size:22px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size:12px;
+}
+.card-stats .type{
+  font-size:11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
 
 .card h1 {
   font-size: 25px;
-  border-bottom: 1px #fff solid;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  font-family: 'AvenirNextLTPro';
 }
 
 .card img {
@@ -96,9 +263,9 @@ input[type='text'] {
   transform-style: preserve-3d;
 }
 
-.card:hover .card-inner {
+/* .card:hover .card-inner {
   transform: rotateY(180deg);
-}
+} */
 
 .card-front,
 .card-back {
@@ -107,12 +274,13 @@ input[type='text'] {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  margin-left: 10px;
 }
 
 .card-back {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 10px;
   transform: rotateY(180deg);
 }
 
@@ -136,4 +304,67 @@ input[type='text'] {
     height: 300px;
     object-fit: contain;
   }
+}
+
+
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+.card-stats .stat {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+.card-stats .value{
+  font-size:22px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size:12px;
+}
+.card-stats .type{
+  font-size:11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }

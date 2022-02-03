@@ -1,8 +1,4 @@
-# Breaking Bad Cast
-
-React project that uses the [breaking bad api](https://breakingbadapi.com/documentation) to show and filter characters from the show
-
-# Usage
+# Usage 97fa41d3-4d94-4fe9-a4cf-718303b88ffa
 
 ```
 # Install dependencies
