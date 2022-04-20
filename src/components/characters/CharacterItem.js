@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProgressBar from '../ui/Progress';
 import axios from 'axios'
 
-const accessToken = 'Mzg1OTQxNDkwMzJjZGIwNzM5ZTg3YmYzZTNlYmE2ODdjMjQ1YWZiZDg0ODQ5ZDRiOWMxMGYwODI1ZmE4YTE4ZA';
+const accessToken = 'ZDgwNjZjY2FjYWQ3N2UxMDUyNWQ5M2QxNmQwYjUyMjczYmVhNDIwY2Q5MWM5MDViM2FmMWZmYTQ1MmJjM2Y5YQ';
 const API_URL = 'https://shoprite.scientrix.com';
 const clientId = process.env.REACT_APP_SCIENTRIX_API_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_SCIENTRIX_API_CLIENT_SECRET;
@@ -85,9 +85,9 @@ const CharacterItem = ({ item }) => {
                 <div class="type">comments</div>
               </div>
             </div> */}
-          {/* <ul>
+          <ul>
             <li>
-              <strong>Planning:</strong> {item.scope}
+              <strong>Planning:</strong> {item.overviewBoxes[2]}
             </li>
             <li>
               <strong>Decisions:</strong> {item.updated}
@@ -95,7 +95,7 @@ const CharacterItem = ({ item }) => {
             <li>
               <strong>IT:</strong> {item.slug}
             </li>
-          </ul> */}
+          </ul>
       </div>
     </div>
   )

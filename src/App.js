@@ -9,7 +9,7 @@ import footer from './img/footer.png'
 import newfooter from './img/new_footer.png'
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from "mdbreact";
 
-const accessToken = 'Mzg1OTQxNDkwMzJjZGIwNzM5ZTg3YmYzZTNlYmE2ODdjMjQ1YWZiZDg0ODQ5ZDRiOWMxMGYwODI1ZmE4YTE4ZA';
+const accessToken = 'ZDgwNjZjY2FjYWQ3N2UxMDUyNWQ5M2QxNmQwYjUyMjczYmVhNDIwY2Q5MWM5MDViM2FmMWZmYTQ1MmJjM2Y5YQ';
 const API_URL = 'https://shoprite.scientrix.com';
 const clientId = process.env.REACT_APP_SCIENTRIX_API_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_SCIENTRIX_API_CLIENT_SECRET;
@@ -45,7 +45,7 @@ const refresh = () => {
 //         setAuth({
 //           accessToken: body.accessToken,
 //           refreshToken: body.refreshToken,
-//         })
+//         }) 
 //       );
 //     return auth;
 //   });
