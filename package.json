@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "mdbreact": "^5.2.0",
+    "nuxt": "^2.15.8",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
@@ -37,19 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "```\r # Install dependencies\r npm install\r ```",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cvanderhaar/scientrix-heroku.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cvanderhaar/scientrix-heroku/issues"
-  },
-  "homepage": "https://github.com/cvanderhaar/scientrix-heroku#readme"
+  }
 }
