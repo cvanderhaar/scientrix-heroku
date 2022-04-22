@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "mdbreact": "^5.2.0",
+    "nuxt": "^2.15.8",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
