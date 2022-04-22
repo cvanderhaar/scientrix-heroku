@@ -14,7 +14,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^5.3.3"
-  },  
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -37,5 +37,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "```\r # Install dependencies\r npm install\r ```",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvanderhaar/scientrix-heroku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvanderhaar/scientrix-heroku/issues"
+  },
+  "homepage": "https://github.com/cvanderhaar/scientrix-heroku#readme"
 }
